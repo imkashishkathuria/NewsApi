@@ -17,12 +17,13 @@ const NewsBoard = ({category}) => {
         </h2>
          
         {
-          articles.map((news,index)=>(
+          articles !== undefined? articles.map((news,index)=>(
             news.urlToImage && news.title? (
             
             <NewsItem key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url} />
             ):null
           ))
+          :null
         }
 
     </div>
